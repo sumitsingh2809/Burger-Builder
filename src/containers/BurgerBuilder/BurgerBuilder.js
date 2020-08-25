@@ -15,20 +15,9 @@ import * as burgerBuilderActions from '../../store/actions/index';
 class BurgerBuilder extends Component {
     state = {
         purchasing: false,
-        loading: false,
-        error: false,
     };
 
-    componentDidMount() {
-        // axios
-        //     .get('https://burger-builder-7fb77.firebaseio.com/ingredients.json')
-        //     .then((response) => {
-        //         this.setState({ ingredients: response.data });
-        //     })
-        //     .catch((error) => {
-        //         this.setState({ error: true });
-        //     });
-    }
+    componentDidMount() {}
 
     // addIngredientHandler = (type) => {
     //     const oldCount = this.state.ingredients[type];
@@ -144,10 +133,6 @@ class BurgerBuilder extends Component {
                     purchaseContinued={this.purchaseContinueHandler}
                 />
             );
-        }
-
-        if (this.state.loading) {
-            orderSummary = <Spinner />;
         }
 
         return (
